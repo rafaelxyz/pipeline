@@ -7,7 +7,7 @@ pipeline {
     environment {
         var1 = 'master'
         TEST_DIR = getTestDir()
-        lib = load("${TEST_DIR}/lib.groovy")
+        lib = load("lib.groovy")
         GITCOMMIT = lib.getGitCommit()
     }
     stages {
