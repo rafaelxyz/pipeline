@@ -34,13 +34,8 @@ def getTestDir() {
     return sh (
             script:
                     """#!/usr/bin/env bash
-                dir="test"
                 cwd="\$(pwd)"
                 echo "current working directory: \${cwd}" >&2
-                if [ ! -d \${dir} ]; then
-                    echo "no \${dir} directory under \${cwd}" >&2
-                    exit 1
-                fi
                 echo "\${cwd}/\${dir}"
             """,
             returnStdout: true
