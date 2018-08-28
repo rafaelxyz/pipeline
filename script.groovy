@@ -8,22 +8,13 @@ pipeline {
         var1 = 'master'
         TEST_DIR = getTestDir()
         lib = load("${TEST_DIR}/lib.groovy")
+        GITCOMMIT = lib.getGitCommit()
     }
     stages {
         stage('stage1') {
-            agent {
-                label agent_label
-            }
             steps {
                 echo 'stage1>step1'
-            }
-        }
-        stage('stage2') {
-            agent {
-                label agent_label
-            }
-            steps {
-                echo 'stage2>step1'
+                echo "${GITCOMMIT}"
             }
         }
     }

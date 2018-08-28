@@ -4,7 +4,7 @@ def getGitCommit() {
     return sh (
             script:
                     """
-                git rev-parse HEAD
+                echo GETGITCOMMIT
             """,
             returnStatus: false,
             returnStdout: true
