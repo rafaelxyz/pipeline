@@ -11,3 +11,4 @@ def getGitCommit() {
     ).trim()
 }
 
+return this
