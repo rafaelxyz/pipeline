@@ -7,11 +7,11 @@ pipeline {
     }
     stages {
         stage('stage1') {
-            script {
-                lib = load("lib.groovy")
-                lib.getGitCommit()
-            }
             steps {
+                script {
+                    lib = load("lib.groovy")
+                    lib.getGitCommit()
+                }
                 echo 'stage1>step1'
                 echo "${GITCOMMIT}"
             }
