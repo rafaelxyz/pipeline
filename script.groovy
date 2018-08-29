@@ -14,7 +14,6 @@ pipeline {
                     lib.getGitCommit()
                 }
                 echo 'stage1>step1'
-                echo "${GITCOMMIT}"
             }
         }
     }
