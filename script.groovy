@@ -4,6 +4,7 @@ package jenkins
 pipeline {
     agent any
     environment {
+        VAR = 'var'
     }
     stages {
         stage('stage1') {
